@@ -68,6 +68,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
                 viewBind.tvEmptyMessage.visibility = View.GONE
                 adapter.populate(it)
             } else {
+                adapter.populate(listOf())
                 viewBind.tvEmptyMessage.visibility = View.VISIBLE
             }
         }
