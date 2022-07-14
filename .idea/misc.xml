@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/shape_border_home_transaction_balance.xml" value="0.211" />
+        <entry key="app/src/main/res/drawable/shape_border_home_transaction_resume.xml" value="0.211" />
+        <entry key="app/src/main/res/drawable/shape_border_item_transaction_content.xml" value="0.211" />
+        <entry key="app/src/main/res/drawable/shape_border_item_transaction_content_last.xml" value="0.211" />
+        <entry key="app/src/main/res/drawable/shape_border_item_transaction_header_date.xml" value="0.211" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/dialog_fragment_add_financial_report.xml" value="0.359375" />
+        <entry key="app/src/main/res/layout/dialog_fragment_add_transaction.xml" value="0.35" />
+        <entry key="app/src/main/res/layout/dropdown_transaction_type.xml" value="0.359375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/item_transaction_content.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/item_transaction_content_last.xml" value="0.359375" />
+        <entry key="app/src/main/res/layout/item_transaction_header_date.xml" value="0.359375" />
+        <entry key="app/src/main/res/layout/item_transaction_history.xml" value="0.359375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

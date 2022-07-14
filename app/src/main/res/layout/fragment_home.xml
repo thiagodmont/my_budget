@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTransactionBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_border_home_transaction_balance"
+        android:layout_marginHorizontal="@dimen/small"
+        android:layout_marginTop="@dimen/small"
+        android:padding="@dimen/small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expenses"
+            android:textSize="@dimen/font_body"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/vDivisorExpensesIncome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvExpensesAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_body"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/tiny"
+            tools:text="$100"
+            app:layout_constraintStart_toStartOf="@id/tvExpenses"
+            app:layout_constraintTop_toBottomOf="@id/tvExpenses"
+            app:layout_constraintEnd_toEndOf="@id/tvExpenses"/>
+
+        <View
+            android:id="@+id/vDivisorExpensesIncome"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            android:layout_marginBottom="@dimen/small"
+            app:layout_constraintStart_toEndOf="@id/tvExpenses"
+            app:layout_constraintEnd_toStartOf="@id/tvIncome"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/pbRatioExpensesIncome" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/income"
+            android:textSize="@dimen/font_body"
+            app:layout_constraintEnd_toStartOf="@id/vDivisorIncomeBalance"
+            app:layout_constraintStart_toEndOf="@id/vDivisorExpensesIncome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvIncomeAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_body"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/tiny"
+            tools:text="$300"
+            app:layout_constraintStart_toStartOf="@id/tvIncome"
+            app:layout_constraintTop_toBottomOf="@id/tvIncome"
+            app:layout_constraintEnd_toEndOf="@id/tvIncome"/>
+
+        <View
+            android:id="@+id/vDivisorIncomeBalance"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            android:layout_marginBottom="@dimen/small"
+            app:layout_constraintStart_toEndOf="@id/tvIncome"
+            app:layout_constraintEnd_toStartOf="@id/tvBalance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/pbRatioExpensesIncome" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/balance"
+            android:textSize="@dimen/font_body"
+            app:layout_constraintStart_toEndOf="@id/vDivisorIncomeBalance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvBalanceAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_body"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/tiny"
+            tools:text="$200"
+            app:layout_constraintStart_toStartOf="@id/tvBalance"
+            app:layout_constraintTop_toBottomOf="@id/tvBalance"
+            app:layout_constraintEnd_toEndOf="@id/tvBalance"/>
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:id="@+id/pbRatioExpensesIncome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:layout_marginTop="@dimen/small"
+            app:layout_constraintTop_toBottomOf="@id/tvIncomeAmount"
+            app:layout_constraintStart_toStartOf="@id/tvExpensesAmount"
+            app:layout_constraintEnd_toEndOf="@id/tvBalance"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEmptyMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_transaction_list"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_title"
+        android:layout_marginTop="@dimen/small"
+        android:layout_marginHorizontal="@dimen/small"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clTransactionBalance"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srRefresher"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/small"
+        android:layout_marginHorizontal="@dimen/small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTransactionBalance"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTransactions"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingBottom="72dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_transaction_content" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddFinancialReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small"
+        android:contentDescription="@string/addTransaction"
+        android:src="@drawable/ic_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

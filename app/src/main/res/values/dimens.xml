@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- base dimens -->
+    <dimen name="xxtiny">2dp</dimen>
+    <dimen name="xtiny">4dp</dimen>
+    <dimen name="tiny">8dp</dimen>
+    <dimen name="small">16dp</dimen>
+    <dimen name="base">24dp</dimen>
+    <dimen name="medium">32dp</dimen>
+    <dimen name="large">48dp</dimen>
+    <dimen name="xlarge">64dp</dimen>
+
+    <!-- font dimens -->
+    <dimen name="font_title">24sp</dimen>
+    <dimen name="font_subtitle">18sp</dimen>
+    <dimen name="font_body">14sp</dimen>
+    <dimen name="font_caption">12sp</dimen>
+    <dimen name="corner_radius">4dp</dimen>
+</resources>
