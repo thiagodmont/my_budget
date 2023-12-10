@@ -20,7 +20,7 @@ internal class HomeViewModel(
     private val _balance = MutableLiveData<FinancialBalance>()
     val balance = _balance.toLiveData()
 
-    private val _viewState = MutableLiveData<ViewState>(ViewState.EMPTY)
+    private val _viewState = MutableLiveData<ViewState>(ViewState.INITIAL)
     val viewState = _viewState.distinctUntilChanged()
 
     fun fetch() {
@@ -35,7 +35,7 @@ internal class HomeViewModel(
                 ViewState.LOADED
             }.recoverCatching {
                 ViewState.ERROR
-            }.getOrDefault(ViewState.ERROR)
+            }.getOrDefault(ViewState.INITIAL)
 
             _viewState.postValue(viewState)
         }

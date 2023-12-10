@@ -77,7 +77,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             when(it) {
                 ViewState.LOADING -> viewBind.srRefresher.isRefreshing = true
                 ViewState.ERROR -> viewBind.srRefresher.isRefreshing = false
-                ViewState.LOADED, ViewState.EMPTY -> {
+                ViewState.LOADED, ViewState.INITIAL -> {
                     viewBind.srRefresher.isRefreshing = false
                 }
             }
